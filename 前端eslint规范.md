@@ -582,6 +582,6 @@ var friend = new Person();
  * @return {number} The sum of the two numbers
  */
 add(num1, num2) {
-    return num1 + num2
+  return num1 + num2
 },
 ```
