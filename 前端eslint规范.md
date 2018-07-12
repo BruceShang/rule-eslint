@@ -1,8 +1,8 @@
-### 引入一个插件，该插件是基础配置。
+### 1. 开发项目中引入一个插件（eslint-config-airbnb-base），该插件是基础配置。
 [规则传送门](https://github.com/airbnb/javascript)
 
-
-### no-debugge 禁用no-debugge
+> 下列配置为项目开发自定义rule
+### 2. no-debugge 禁用no-debugge
 ```js
 // bad
 /*eslint no-debugger: "error"*/
@@ -18,7 +18,7 @@ function isTruthy(x) {
     return Boolean(x); // set a breakpoint at this line
 }
 ```
-### no-alert 禁用 Alert
+### 3. no-alert 禁用 Alert
 
 ```js
 // bad
@@ -44,7 +44,7 @@ function foo() {
     alert();
 }
 ```
-### 要求或禁止使用分号代替 ASI
+### 4. 要求或禁止使用分号代替 ASI
 ```js
 // bad
 /*eslint semi: ["error", "never"]*/
@@ -82,7 +82,7 @@ import b from "b"
 })()
 ```
 
-### no-console 禁用 console
+### 5. no-console 禁用 console
 ```js
 // bad
 
@@ -99,7 +99,7 @@ Console.log("Hello world!");
 // example
 window.console.log('Hello world!')
 ```
-### prefer-const 要求使用 const 声明那些声明后不再被修改的变量
+### 6. prefer-const 要求使用 const 声明那些声明后不再被修改的变量
 ```js
 // bad
 /*eslint prefer-const: "error"*/
@@ -171,7 +171,7 @@ for (let i = 0, end = 10; i < end; ++i) {
 var b = 3;
 console.log(b);
 ```
-### eol-last 要求或禁止文件末尾存在空行
+### 7. eol-last 要求或禁止文件末尾存在空行
 ```js
 // bad
 
@@ -189,7 +189,7 @@ function doSmth() {
   var foo = 2;
 }
 ```
-### object-shorthand 要求或禁止对象字面量中方法和属性使用简写语法
+### 8. object-shorthand 要求或禁止对象字面量中方法和属性使用简写语法
 ```js
 // bad
 /*eslint object-shorthand: "error"*/
@@ -215,7 +215,7 @@ var foo = {
 };
 ```
 
-### 要求或禁止使用拖尾逗号 (comma-dangle)
+### 9. 要求或禁止使用拖尾逗号 (comma-dangle)
 ```js
 // bad
 /*eslint comma-dangle: ["error", "always"]*/
@@ -248,7 +248,7 @@ foo({
   qux: "quux",
 });
 ```
-### 要求或禁止函数圆括号之前有一个空格 (space-before-function-paren)
+### 10. 要求或禁止函数圆括号之前有一个空格 (space-before-function-paren)
 ```js
 // bad
 /*eslint space-before-function-paren: ["error", "never"]*/
@@ -311,7 +311,7 @@ var foo = {
 
 var foo = async() => 1
 ```
-### 建议使用模板而非字符串连接 (prefer-template)
+### 11. 建议使用模板而非字符串连接 (prefer-template)
 
 ```js
 // bad
@@ -329,7 +329,7 @@ var str = "Hello World!";
 var str = `Hello, ${name}!`;
 var str = `Time: ${12 * 60 * 60 * 1000}`;
 ```
-### 要求 return 语句要么总是指定返回的值，要么不指定 (consistent-return)
+### 12. 要求 return 语句要么总是指定返回的值，要么不指定 (consistent-return)
 ```js
 // bad
 /*eslint consistent-return: "error"*/
@@ -368,7 +368,7 @@ function Foo() {
     this.a = 0;
 }
 ```
-### 要求对象字面量属性名称使用引号 (quote-props)
+### 13. 要求对象字面量属性名称使用引号 (quote-props)
 
 ```js
 // bad
@@ -407,7 +407,7 @@ var object3 = {
 };
 
 ```
-### 禁止或强制在括号内使用空格 (array-bracket-spacing)
+### 14. 禁止或强制在括号内使用空格 (array-bracket-spacing)
 ```js
 // bad
 
@@ -452,7 +452,7 @@ var [x, ...y] = z;
 var [,,x,] = z;
 ```
 
-### 禁止未使用过的变量 (no-unused-vars)
+### 15. 禁止未使用过的变量 (no-unused-vars)
 ```js
 // bad
 
@@ -517,7 +517,7 @@ function getY([, y]) {
 
 ```
 
-### 禁止或强制在计算属性中使用空格 (computed-property-spacing)
+### 16. 禁止或强制在计算属性中使用空格 (computed-property-spacing)
 ```js
 // bad
 
@@ -540,7 +540,7 @@ var x = {[b]: a}
 obj[foo[bar]]
 ```
 
-### 强制行的最大长度 (max-len)默认80
+### 17. 强制行的最大长度 (max-len)默认80
 ```js
 // bad
 /*eslint max-len: ["error", { "code": 80 }]*/
@@ -557,7 +557,7 @@ var foo = {
 };
 ```
 
-### 要求构造函数首字母大写 (new-cap)
+### 18. 要求构造函数首字母大写 (new-cap)
 ```js
 // bad
 
@@ -572,7 +572,7 @@ var friend = new person();
 var friend = new Person();
 ```
 
-### 附加一个标准的函数注释
+### 19. 附加一个标准的函数注释
 ```js
 /**
  * Add two numbers
