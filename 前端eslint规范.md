@@ -1,3 +1,7 @@
+### 引入一个插件，该插件是基础配置。
+[规则传送门](https://github.com/airbnb/javascript)
+
+
 ### no-debugge 禁用no-debugge
 ```js
 // bad
@@ -568,5 +572,16 @@ var friend = new person();
 var friend = new Person();
 ```
 
-### 引入一个插件，该插件是基础配置。
-[规则传送门](https://github.com/airbnb/javascript)
+### 附加一个标准的函数注释
+```js
+/**
+ * Add two numbers
+ *
+ * @param {number} num1 - The first number
+ * @param {number} num2 - The second number
+ * @return {number} The sum of the two numbers
+ */
+add(num1, num2) {
+    return num1 + num2
+},
+```
